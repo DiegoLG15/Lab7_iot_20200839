@@ -82,7 +82,6 @@ public class LoginActivity extends AppCompatActivity {
 
                         user.reload().addOnCompleteListener(task -> {
                             if (user.isEmailVerified()) {
-                                Usuario usuario = new Usuario();
                                 goToMainActivity();
                             } else {
                                 user.sendEmailVerification().addOnCompleteListener(task2 -> {
